@@ -30,6 +30,14 @@ class CodeReviewer:
 {code}
 ```
 
+CRITICAL RULES:
+- Only report issues that ACTUALLY EXIST in this specific code
+- If the code works correctly, say so
+- Don't invent problems that aren't there
+- Don't mention missing docstrings unless asked
+- Don't mention naming conventions unless they're genuinely confusing
+- Focus on bugs, logic errors, and real inefficiencies
+
 Provide:
 
 ## Score: X/100

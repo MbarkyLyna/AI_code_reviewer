@@ -16,13 +16,13 @@ st.sidebar.title(" Settings")
 
 # API Key input (optional - can use hardcoded one)
 api_key = st.sidebar.text_input(
-    "OpenAI API Key (Optional)",
+    "GROQ API Key (Optional)",
     type="password",
-    help="Get free $5 credits at platform.openai.com. Leave empty to use default."
+    help=" Leave empty to use default."
 )
 
 if not api_key:
-    api_key = os.getenv('OPENAI_API_KEY')
+    api_key = os.getenv('GROQ_API_KEY')
 
 language = st.sidebar.selectbox(
     "Programming Language",
@@ -145,7 +145,7 @@ if analyze_btn:
             
         except ValueError as e:
             st.error(f"Configuration Error: {str(e)}")
-            st.info(" Tip: Make sure you've added your OpenAI API key in the code or sidebar.")
+            st.info(" Tip: Make sure you've added your GROQ API key in the code or sidebar.")
         except Exception as e:
             st.error(f"Error during analysis: {str(e)}")
 
@@ -188,7 +188,6 @@ with col3:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: gray;">
-    <p>Built with OpenAI GPT-4 | Not a replacement for human code review</p>
-    <p>Always verify suggestions before applying to production code</p>
+    <p>Always verify suggestions before applying to production code OFC</p>
 </div>
 """, unsafe_allow_html=True)
